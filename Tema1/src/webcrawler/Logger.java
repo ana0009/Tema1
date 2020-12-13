@@ -12,6 +12,17 @@ public class Logger {
 
 
     public Logger(String m_path) {
+        try {
+            fh = new FileHandler(m_path, false);
+            logger.addHandler(fh);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
