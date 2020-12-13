@@ -26,9 +26,7 @@ public class Logger {
     }
 
 
-    public void logger(String m_mesaj) {
-
-    }
+    public void logger(String m_mesaj) {logger.info(m_mesaj);}
 
     public void print() {
 
